@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--MarkDownDemo-->
+        <!--Mk文档-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -395,7 +395,7 @@ self.webView.scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingB
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.83529411760000005" green="0.33333333329999998" blue="0.20523331610000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MarkDownDemo" id="Yf1-rd-IZm">
+                    <navigationItem key="navigationItem" title="Mk文档" id="Yf1-rd-IZm">
                         <barButtonItem key="rightBarButtonItem" title="预览" id="6OY-f0-nMX">
                             <color key="tintColor" red="0.83529411760000005" green="0.33333333329999998" blue="0.20523331610000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -420,10 +420,11 @@ self.webView.scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingB
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" id="prE-V0-tUi">
-                                <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="prE-V0-tUi">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="BBs-Ks-lQ1" id="3eC-Ae-R73"/>
                                 </connections>

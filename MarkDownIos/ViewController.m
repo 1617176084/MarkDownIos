@@ -24,16 +24,12 @@
 - (void)loadHtml {
 
   NSString *filePath =
-      [[NSBundle mainBundle] pathForResource:@"ShowHtml" ofType:@"html"];
+      [[NSBundle mainBundle] pathForResource:@"help" ofType:@"txt"];
 
   NSString *htmlString = [NSString stringWithContentsOfFile:filePath
                                                    encoding:NSUTF8StringEncoding
                                                       error:nil];
-  // 获取当前应用的根目录
-  NSString *path = [[NSBundle mainBundle] bundlePath];
-  NSURL *baseURL = [NSURL fileURLWithPath:path];
-  NSURL *htmlBaseUrl = [NSURL URLWithString:filePath];
-  [_webV loadHTMLString:htmlString baseURL:baseURL];
+  _markDownTextV.text = htmlString;
 
   //  [_webV loadRequest:[NSURLRequest
   //                         requestWithURL:

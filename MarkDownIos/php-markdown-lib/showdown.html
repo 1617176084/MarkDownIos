@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+		<title>GitHub Markdown CSS demo</title>
+		<link rel="stylesheet" href="github-markdown.css">
+		<link rel="stylesheet" href="GitHub.css">
+		
+		<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+		</style>
+	</head>
+	<body>
+	
+       <!--<article class="markdown-body">
+	    <?php 
+		include 'Parsedown.php';
+		$Parsedown = new Parsedown();
+        $content = file_get_contents('README.md'); 
+		echo $Parsedown->text( $content);
+        ?>
+	   </article>-->
+    <textarea id="text-input" oninput="this.editor.update()"
+              rows="6" cols="60">Type **Markdown** here.</textarea>
+    <div id="preview"> </div>
+    <script src="lib/markdown.js"></script>
+		<script src="dist/showdown.js"></script>
+    <script>
+      function Editor(input, preview) {
+        this.update = function () {
+					var converter = new showdown.Converter();
+           preview.innerHTML   = converter.makeHtml(input.value);
+     //     preview.innerHTML = markdown.toHTML(input.value);
+        };
+        input.editor = this;
+        this.update();
+      }
+      var $ = function (id) { return document.getElementById(id); };
+      new Editor($("text-input"), $("preview"));
+    </script>
+	</body>
+</html>

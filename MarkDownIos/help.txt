@@ -7,7 +7,7 @@ Markdown: Basics （快速入门）
 [d]: http://daringfireball.net/projects/markdown/dingus "Markdown Dingus"
 
 其实直接试试看也是一个很不错的方法， [Dingus][d] 是一个网页应用程序，你可以把自已编写的 Markdown 文档转成 XHTML。
-
+ 
 ## 段落、标题、区块代码 ##
 
 一个段落是由一个以上的连接的行句组成，而一个以上的空行则会划分出不同的段落（空行的定义是显示上看起来像是空行，就被视为空行，例如有一行只有空白和 tab，那该行也会被视为空行），一般的段落不需要用空白或换行缩进。
